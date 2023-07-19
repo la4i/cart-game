@@ -70,6 +70,12 @@
       font-weight: 400;
       line-height: 72px;
   }
+
+  .level:focus {
+    color:white;
+    background-color: #0080C1;
+  }
+
   .btn{
       color: #FFF;
       font-size: 24px;
@@ -81,4 +87,3 @@
       background: var(--salad-60, #7AC100);
       padding: 9px 91px;
   }
- 
