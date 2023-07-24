@@ -50,7 +50,7 @@
       padding-bottom: 40px;
   }
 
-  .levels input [type="radio"] {
+  .levels input[type="radio"] {
     display: none;  
   }
 
@@ -70,6 +70,7 @@
     font-weight: 400;
     line-height: 72px;
     padding-top: 12px;
+    cursor: pointer;
   }
 
   .btn{
