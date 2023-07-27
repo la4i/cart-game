@@ -35,9 +35,11 @@ module.exports = {
             patterns: [{ from: 'static', to: 'static' }],
         }),
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: './index.html',
         }),
         new HtmlWebpackPlugin({
+            filename: 'game.html',
             template: './game.html',
         }),
         new MiniCssExtractPlugin(),
