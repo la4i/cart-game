@@ -1,27 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-    <link rel="stylesheet" href="src/css/style.css" />
-</head>
-<body>
-    <div id="game-board" class="content">
-        <h1 class="text">Выбери<br>сложность</h1>
-        <div class="levels">
-            <input type="radio" id="easy" name="radios" value="1">
-                <label for="easy">1</label>
-            <input type="radio" id="medium" name="radios" value="2">
-                <label for="medium">2</label>
-            <input type="radio" id="hard" name="radios" value="3">
-                <label for="hard">3</label>
+        <link rel="stylesheet" href="src/css/style.css" />
+    </head>
+    <body>
+        <div id="game-board" class="content">
+            <h1 class="text">Выбери<br />сложность</h1>
+            <div class="levels">
+                <div class="level-btn">
+                    <input
+                        class="level-input"
+                        type="radio"
+                        id="easy"
+                        name="radios"
+                        value="1"
+                    />
+                    <label for="easy">1</label>
+                </div>
+                <div class="level-btn">
+                    <input
+                        class="level-input"
+                        type="radio"
+                        id="medium"
+                        name="radios"
+                        value="2"
+                    />
+                    <label for="medium">2</label>
+                </div>
+                <div class="level-btn">
+                    <input
+                        class="level-input"
+                        type="radio"
+                        id="hard"
+                        name="radios"
+                        value="3"
+                    />
+                    <label for="hard">3</label>
+                </div>
+            </div>
+            <button id="start" class="btn">Старт</button>
         </div>
-        <button id="start" class="btn">Старт</button>
-    </div>
-    <script src="src/index.js"></script>
-</body>
-
+        <script src="src/index.js"></script>
+    </body>
 </html>

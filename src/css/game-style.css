@@ -1,0 +1,90 @@
+@font-face {
+    font-family: StratosSkyeng;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/stratosskyengweb-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: StratosSkyeng;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./fonts/stratosskyengweb-medium.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: StratosSkyeng, sans-serif;
+    background-color: #004980;
+}
+
+a {
+    text-decoration: none;
+}
+
+.min-sek {
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0;
+    text-align: left;
+    gap: 65px;
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+.time {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 0;
+    text-align: left;
+    padding-left: 20px;
+    color: white;
+}
+
+.start-over-btn {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.btn {
+    color: white;
+    background: var(--salad-60, #7ac100);
+    border-color: transparent;
+    width: 246px;
+    height: 50px;
+    top: 52px;
+    left: 755px;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.div-carts {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column-reverse;
+    padding-top: 20px;
+}
+
+.cart {
+    width: 95px;
+    height: 133px;
+    border-radius: 4px;
+}
+
+.carts {
+    display: inherit;
+    gap: 15px;
+}

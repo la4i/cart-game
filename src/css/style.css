@@ -21,6 +21,7 @@
 }
 
 body {
+    font-family: StratosSkyeng, sans-serif;
     background-color: #004980;
     height: 100vh;
     display: flex;
@@ -61,7 +62,7 @@ a {
     gap: 20px;
 }
 
-.levels label {
+.level-btn {
     width: 98px;
     height: 98px;
     border-radius: 12px;
@@ -74,6 +75,10 @@ a {
     line-height: 72px;
     padding-top: 12px;
     cursor: pointer;
+}
+
+.level-btn:active {
+    background-color: green;
 }
 
 .btn {
