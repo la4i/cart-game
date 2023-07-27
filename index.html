@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
 </head>
 <body>
-    <div class="content">
+    <div id="game-board" class="content">
         <h1 class="text">Выбери<br>сложность</h1>
         <div class="levels">
-            <a href="#" class="level">1</a>
-            <a href="#" class="level">2</a>
-            <a href="#" class="level">3</a>
+            <input type="radio" id="easy" name="radios" value="1">
+                <label for="easy">1</label>
+            <input type="radio" id="medium" name="radios" value="2">
+                <label for="medium">2</label>
+            <input type="radio" id="hard" name="radios" value="3">
+                <label for="hard">3</label>
         </div>
-        <a href="#" class="btn">Старт</a>
+        <button id="start" class="btn">Старт</button>
     </div>
-    <script src="/index.js"></script>
+    <script src="src/index.js"></script>
 </body>
+
 </html>
