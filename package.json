@@ -1,0 +1,32 @@
+{
+    "name": "cart-game",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "http-server -p 3004",
+        "format": "prettier --write ./src/",
+        "lint:js": "eslint ./src/**/*.js",
+        "lint:css": "stylelint ./src/**/*.css",
+        "lint": "npm run lint:js && npm run lint:css",
+        "prepare": "husky install"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "http-server": "^14.1.1",
+        "husky": "^8.0.3",
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "axios": "^1.4.0",
+        "eslint": "^8.45.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "prettier": "^3.0.0",
+        "stylelint": "^15.10.2",
+        "stylelint-config-standard": "^34.0.0",
+        "stylelint-prettier": "^4.0.0"
+    }
+}
