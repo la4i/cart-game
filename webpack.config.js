@@ -46,6 +46,7 @@ module.exports = {
     ],
     optimization: {
         minimizer: ['...', new CssMinimizerPlugin()],
+        minimize: true,
     },
     devtool: isProduction ? 'hidden-source-map' : 'source-map',
 };
