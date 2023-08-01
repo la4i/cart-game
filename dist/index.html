@@ -7,36 +7,33 @@
         <title>Document</title>
 
         <link rel="stylesheet" href="src/css/style.css" />
-    </head>
+    <script defer src="bundle.js"></script></head>
     <body>
         <div id="game-board" class="content">
             <h1 class="text">Выбери<br />сложность</h1>
             <div class="levels">
-                <div class="level-btn">
+                <div class="level-btn" id="easy">
                     <input
                         class="level-input"
                         type="radio"
-                        id="easy"
                         name="radios"
                         value="1"
                     />
                     <label for="easy">1</label>
                 </div>
-                <div class="level-btn">
+                <div class="level-btn" id="medium">
                     <input
                         class="level-input"
                         type="radio"
-                        id="medium"
                         name="radios"
                         value="2"
                     />
                     <label for="medium">2</label>
                 </div>
-                <div class="level-btn">
+                <div class="level-btn" id="hard">
                     <input
                         class="level-input"
                         type="radio"
-                        id="hard"
                         name="radios"
                         value="3"
                     />
