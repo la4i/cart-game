@@ -6,16 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
 
-        <link rel="stylesheet" href="src/css/game-style.css" />
+        <link rel="stylesheet" href="static/css/game-style.css" />
     </head>
     <body>
         <div class="tamer">
-            <div class="min-sek">
-                <p class="min">min</p>
-                <p class="sek">sek</p>
-            </div>
-            <div class="time">
-                <p class="time-time">00.00</p>
+            <div>
+                <div class="min-sek">
+                    <p class="min">min</p>
+                    <p class="sek">sek</p>
+                </div>
+                <div class="time">
+                    <p class="time-time">00.00</p>
+                </div>
             </div>
             <div class="start-over-btn">
                 <button id="start-over" class="btn">Начать Заново</button>
@@ -23,49 +25,18 @@
         </div>
         <div class="div-carts">
             <div class="carts">
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-            </div>
-            <div class="carts">
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-            </div>
-            <div class="carts">
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-            </div>
-            <div class="carts">
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
-                <img class="cart" src="/img/rubashka.jpg" alt="rubashka" />
             </div>
         </div>
+        <div class="modalWrapper"></div>
+        <!-- <div class="modal-bg">
+            <div class="modal">
+                <img src="/static/img/win.png" alt="win">
+                <h2 class="modal-title">Вы выиграли!</h2>
+                <p class="timer-title">Затраченное время:</p>
+                <h1 class="timer-count">00.00</h1>
+                <button class="btn playAgain">Играть снова</button>
+            </div>
+        </div> -->
+        <script src="src/game.js"></script>
     </body>
 </html>
