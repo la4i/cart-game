@@ -8,8 +8,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
     entry: {
-        entry: './src/index.js',
-        entry2: './src/game.js',
+        entry: './src/index.ts',
+        entry2: './src/game.ts',
     },
     mode: isProduction ? 'production' : 'development',
     output: {
@@ -19,6 +19,11 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
             {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
@@ -32,6 +37,9 @@ module.exports = {
                 type: 'asset/resource',
             },
         ],
+    },
+    resolve: {
+        extensions: ['.ts', '.js'],
     },
     plugins: [
         new CopyPlugin({

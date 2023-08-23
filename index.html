@@ -5,14 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-
-        <link rel="stylesheet" href="static/css/style.css" />
     </head>
     <body>
         <div id="game-board" class="content">
             <h1 class="text">Выбери<br />сложность</h1>
             <div class="levels">
-                <div class="level-btn">
+                <label class="level-btn" for="easy"
+                    >1
                     <input
                         class="level-input"
                         type="radio"
@@ -20,9 +19,10 @@
                         name="radios"
                         value="1"
                     />
-                    <label for="easy">1</label>
-                </div>
-                <div class="level-btn">
+                </label>
+
+                <label class="level-btn" for="medium"
+                    >2
                     <input
                         class="level-input"
                         type="radio"
@@ -30,9 +30,10 @@
                         name="radios"
                         value="2"
                     />
-                    <label for="medium">2</label>
-                </div>
-                <div class="level-btn">
+                </label>
+
+                <label class="level-btn" for="hard"
+                    >3
                     <input
                         class="level-input"
                         type="radio"
@@ -40,11 +41,9 @@
                         name="radios"
                         value="3"
                     />
-                    <label for="hard">3</label>
-                </div>
+                </label>
             </div>
             <button id="start" class="btn">Старт</button>
         </div>
-        <script src="src/index.js"></script>
     </body>
 </html>
