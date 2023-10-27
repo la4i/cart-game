@@ -13,10 +13,8 @@ function startGame() {
 let start = document.getElementById('start');
 
 if (start !== null) {
-
     start.addEventListener('click', startGame);
 }
-
 
 export function selectLevel(level: string | null) {
     selectedLevel = level;
