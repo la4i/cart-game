@@ -1,7 +1,7 @@
-import { totalCards } from './index';
 import '../static/css/game-style.css';
+import { selectLevel } from '../functiontest';
 
-let level: string | null = localStorage.getItem('level');
+export let level: string | null = localStorage.getItem('level');
 const board = document.querySelector('.carts');
 const suits = ['chervi', 'bubi', 'kresti', 'piki'];
 const ranks = ['6', '7', '8', '9', '10', 'Q', 'K', 'J', 'A'];
@@ -9,6 +9,8 @@ type TypeSelectedCards = {
     suit: string;
     rank: string;
 };
+
+let totalCards = selectLevel(level);
 let selectedCards: TypeSelectedCards[] = [];
 let gameIsStart = false;
 let timer: HTMLElement | null = document.querySelector('.time-time');
@@ -102,18 +104,16 @@ const startGame = () => {
     }, 5000);
 
     const numPairs = totalCards !== null ? totalCards / 2 : 0;
-
     for (let index = 0; index < numPairs; index++) {
         const suit = suits[Math.floor(Math.random() * suits.length)];
         const rank = ranks[Math.floor(Math.random() * ranks.length)];
-
         for (let index = 0; index < 2; index++) {
             const card = document.createElement('p');
             card.classList.add('card-background');
 
             const hiddenImg = document.createElement('img');
             hiddenImg.classList.add('cart');
-            hiddenImg.src = '../static/img/rubashka.jpg';
+            hiddenImg.src = './static/img/rubashka.jpg';
             hiddenImg.alt = 'rubashka';
 
             card.addEventListener('click', () =>
@@ -132,10 +132,20 @@ const startGame = () => {
             }, 5000);
         }
     }
+    // let templateCard = ''
+    // templateCard += '<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>'
+    // app.innerHTML = templateCard
 
     // Перетасовка карт
     for (let index: number = board?.children.length!; index >= 0; index--) {
-        board?.appendChild(board.children[(Math.random() * index) | 0]);
+        console.log('board =', board);
+        const randNum = Math.floor(Math.random() * index);
+        console.log('randNum = ', randNum);
+        console.log(
+            'board.children[Math.random() * index] =',
+            board?.children[randNum],
+        );
+        board?.appendChild(board?.children[randNum]);
     }
 };
 
@@ -144,15 +154,17 @@ startGame();
 // Кнока рестарта игры
 
 document.getElementById('start-over')?.addEventListener('click', () => {
-    board?.replaceChildren();
-    startGame();
-    window.clearInterval(TimerId);
-    gameIsStart = false;
-    selectedCards = [];
-    timer!.innerHTML = '00.00';
+    window.location.href = '/index.html';
+
+    //  board?.replaceChildren();
+    // startGame();
+    // window.clearInterval(TimerId);
+    // gameIsStart = false;
+    // selectedCards = [];
+    // timer!.innerHTML = '00.00';
 });
 
-const checkIsGameFinish = () => {
+function checkIsGameFinish() {
     if (selectedCards.length >= 2 && gameIsStart) {
         if (
             selectedCards[0].suit === selectedCards[1].suit &&
@@ -191,4 +203,4 @@ const checkIsGameFinish = () => {
             playAgain.addEventListener('click', startGame);
         }
     }
-};
+}

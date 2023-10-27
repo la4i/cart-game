@@ -1,5 +1,6 @@
-import { selectLevel } from './src/index';
+
 import { it, describe, expect } from '@jest/globals';
+import { selectLevel } from './functiontest';
 
 describe('selectLevel', () => {
     describe('level', () => {
